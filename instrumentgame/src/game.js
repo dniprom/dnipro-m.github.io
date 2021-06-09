@@ -41,13 +41,13 @@ var Game = Game || (function (createjs, $) {
         ];
 
         // Randomize Questions/Answers
-        if (gameData.RandomizeQuestions || gameData.RandomizeQuestions) {
+        if (gameData.RandomizeQuestions) {
             gameData.Questions = shuffle(gameData.Questions);
         }
 
 
         for (var i = 0; i < gameData.Questions.length; i++) {
-            if (gameData.Questions[i].RandomizeAnswers) {
+            if (gameData.RandomizeAnswers) {
                 gameData.Questions[i].Answers = shuffle(gameData.Questions[i].Answers);
             }
         }
@@ -109,17 +109,17 @@ var Game = Game || (function (createjs, $) {
 
         var maxMoveNbr = 5;
 
-        var boardStartX = 50;
-        var boardStartY = 60;
-        var boardWidth = 600;
-        var boardHeight = 500;
+        var boardStartX = 30;
+        var boardStartY = 55;
+        var boardWidth = 1060;
+        var boardHeight = 635;
 
         var containerAtX = boardStartX + boardWidth + 20;
-        var hintContainerAtY = boardStartY;
+        var hintContainerAtY = 600;
         var movesContainerAtY = 340;
         var scoreContainerAtY = 470;
         var questionsContainerAtY = 190;
-        var maxI = 12; //number of element in a row
+        var maxI = 17; //number of element in a row
         var maxJ = 10; //number of element in a column
         var DragThreshold = 30;
         if (navigator.userAgent.match(/Android/i)
@@ -202,8 +202,8 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#421538");
-            canvasBackground.graphics.drawRect(0, 0, 800, 600);
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#444343");
+            canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
             //create game objects
@@ -247,7 +247,7 @@ var Game = Game || (function (createjs, $) {
 
             function wrongAnswer(message) {
 
-                var text = new createjs.Text(message, "bold 30px Cooper Black", "brown");
+                var text = new createjs.Text(message, "bold 30px Cooper Black", "beige");
 
                 text.set({
                     x: 400,
@@ -378,16 +378,14 @@ var Game = Game || (function (createjs, $) {
 
             function createInstructionContainer() {
                 var instructionsContainer = new createjs.Container();
-                instructionsContainer.x = 0;
-                instructionsContainer.y = 550;
+                instructionsContainer.x = 1500;
+                instructionsContainer.y = 670;
                 instructionsContainer.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#F00").drawCircle(0, 50, 50));
                 instructionsContainer.cursor = 'pointer';
 
                 instructionsContainer.addChild(new createjs.Bitmap(queue.getResult("instructions_background")));
                 instructionsContainer.addChild(new createjs.Bitmap(queue.getResult("instructions_question")));
-
-
-
+		
                 instructionsContainer.addEventListener("click", function () {
                     showView(getInstructionsView());
                 });
@@ -399,20 +397,19 @@ var Game = Game || (function (createjs, $) {
 
 
             function createSoundContainer() {
-                var scaleX = .75;
-                var scaleY = .75;
+                var scaleX = 1;
+                var scaleY = 1;
 
                 var soundContainer = new createjs.Container();
-                soundContainer.x = 0;
+                soundContainer.x = 1280;
                 soundContainer.y = 0;
                 soundContainer.visible = true;
                 soundContainer.name = "theSoundContainer";
                 soundContainer.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#F00").drawCircle(0, 50, 50));
                 soundContainer.cursor = 'pointer';
-                var bg = new createjs.Bitmap(queue.getResult("instructions_background"));
-                bg.rotation = 90;
+                var bg = new createjs.Bitmap(queue.getResult("sound_bg"));
                 bg.x = 50;
-                bg.y = 0;
+                bg.y = 50;
                 soundContainer.addChild(bg);
                 var sound = new createjs.Bitmap(queue.getResult("musicOn"));
                 sound.name = "musicOnImage"
@@ -462,17 +459,14 @@ var Game = Game || (function (createjs, $) {
 
                 var descriptionText = new createjs.Text(gameData.Description, "20px Bold Arial", "dark gray");
                 descriptionText.lineWidth = 780;
-                descriptionText.x = 10;
-                descriptionText.y = 120;
+                descriptionText.x = 800;
+                descriptionText.y = 500;
 
                 var startButton = new createjs.Bitmap(queue.getResult("start_button"));
-                startButton.shadow = new createjs.Shadow("gray", 3, 3, 3);
                 startButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
                 startButton.cursor = 'pointer';
-                startButton.regX = 50;
-                startButton.regY = 50;
-                startButton.x = 725;
-                startButton.y = 525;
+          	startButton.x = 1160;
+                startButton.y = 610;
 
                 view.addChild(new createjs.Bitmap(queue.getResult("title_background")))
                 view.addChild(startButton);
@@ -1428,7 +1422,7 @@ var Game = Game || (function (createjs, $) {
                     descriptionText.color = "green";
                     descriptionText.text = question.Feedback;
                     descriptionText.x = 5;
-                    descriptionText.y = 90;
+                    descriptionText.y = 150;
                     descriptionText.lineWidth = boardWidth - 25;
                     descriptionText.name = "detailsText";
 
@@ -1507,7 +1501,7 @@ var Game = Game || (function (createjs, $) {
 
                 if (evt.currentTarget.IsCorrect) {
 
-                    displayMessage("Good Job!");
+                    displayMessage("ВІРНО!");
                     createjs.Sound.play("gameshort");
                     questionContainer.getChildByName('nextButton').success = true;
 
@@ -1535,7 +1529,7 @@ var Game = Game || (function (createjs, $) {
                     }
                     var message;
 
-                    message = "Wrong Answer!";
+                    message = "НЕВІРНО!!";
                     wrongAnswer(message);
                     createjs.Sound.play("aaeesshh1");
 
@@ -1650,8 +1644,8 @@ var Game = Game || (function (createjs, $) {
                 //user score title
                 var scoreLabel = new createjs.Text("", "20px Verdana", "");
                 scoreLabel.color = "yellow";
-                scoreLabel.text = " Score:";
-                scoreLabel.x = 5;
+                scoreLabel.text = " Рекорд:";
+                scoreLabel.x = 10;
                 scoreLabel.y = 2;
                 container.addChild(scoreLabel);
 
@@ -1659,7 +1653,7 @@ var Game = Game || (function (createjs, $) {
                 var scoreText = new createjs.Text("", "32px Verdana bold", "");
                 scoreText.color = "white";
                 scoreText.text = gameState.score;
-                scoreText.x = 25;
+                scoreText.x = 40;
                 scoreText.y = 40;
                 scoreText.name = "score";
                 container.addChild(scoreText);
@@ -1724,8 +1718,8 @@ var Game = Game || (function (createjs, $) {
                 //user score title
                 var movesLeftLabel = new createjs.Text("", "20px Verdana", "");
                 movesLeftLabel.color = "yellow";
-                movesLeftLabel.text = " Moves\n  Left:";
-                movesLeftLabel.x = 5;
+                movesLeftLabel.text = " Залишилось\n      ходів:";
+                movesLeftLabel.x = 0;
                 movesLeftLabel.y = 2;
                 container.addChild(movesLeftLabel);
 
@@ -1733,7 +1727,7 @@ var Game = Game || (function (createjs, $) {
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
                 movesLeftText.color = "white";
                 movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score. 
-                movesLeftText.x = 30;
+                movesLeftText.x = 40;
                 movesLeftText.y = 50;
                 movesLeftText.name = "movesLeft";
                 container.addChild(movesLeftText);
@@ -1748,8 +1742,8 @@ var Game = Game || (function (createjs, $) {
                 //user score title
                 var qLeftLabel = new createjs.Text("", "20px Verdana", "");
                 qLeftLabel.color = "yellow";
-                qLeftLabel.text = "Questions\n   Left:";
-                qLeftLabel.x = 5;
+                qLeftLabel.text = "Залишилось\n  запитань:";
+                qLeftLabel.x = 0;
                 qLeftLabel.y = 2;
                 container.addChild(qLeftLabel);
 
@@ -1757,7 +1751,7 @@ var Game = Game || (function (createjs, $) {
                 var qLeftText = new createjs.Text("", "32px Verdana", "");
                 qLeftText.color = "white";
                 qLeftText.text = questionsLeft;
-                qLeftText.x = 30;
+                qLeftText.x = 40;
                 qLeftText.y = 50;
                 qLeftText.name = "questionsLeft";
                 container.addChild(qLeftText);
@@ -1789,13 +1783,13 @@ var Game = Game || (function (createjs, $) {
                 if (gameState.score > 0) {
                     image = queue.getResult("chakalaka_bowl");
                     winner_header = new createjs.Bitmap(queue.getResult("winner_header"));
-                    titleText = new createjs.Text("You won " + gameState.score + " points!", "32pt Arial bold", "white");
+                    titleText = new createjs.Text("Ви набрали " + gameState.score + " балів!", "32pt Arial bold", "white");
                     createjs.Sound.play("chakalaka2");
                 }
                 else {
                     image = queue.getResult("smashed_tomato");
                     winner_header = new createjs.Bitmap(queue.getResult("aesh_header"));
-                    titleText = new createjs.Text("Sorry, you didn't win any points!", "24pt Arial bold", "white");
+                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "white");
                     createjs.Sound.play("aaeesshh1");
                 }
 

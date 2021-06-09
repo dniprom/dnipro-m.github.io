@@ -26,22 +26,18 @@
         #gameContainer canvas {
             border: #707070 solid 1px;
             border-radius: 5px;
-            display: block;
-            width: 800px;
-            height: 600px;
+            width: 1280px;
+            height: 720px;
             margin: 15px auto;
+display: flex;
+  align-items: center;  
         }
 
-        #licenseContainer{
-            margin-top: 15px;
-            width: 800px;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body onbeforeunload="onUnload();">
     <div id="gameContainer">
-        <canvas width="800" height="600">
+        <canvas width="1280" height="720">
             <h3>Your browser does not support HTML5.</h3>
         </canvas>
         <script type="text/javascript">
@@ -66,16 +62,5 @@
             })();
         </script>
     </div>
-    <div id="licenseContainer">
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-            <img alt="Creative Commons License" style="border-width: 0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-        </a>
-        <div>
-            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" id="gameTitleSpan">This game</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Fox Valley Technical College</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-                    <p>
-                        This workforce product was funded by a grant awarded by the U.S. Department of Labor’s Employment and Training Administration. The product was created by the grantee and does not necessarily reflect the official position of the U.S. Department of Labor. The U.S. Department of Labor makes no guarantees, warranties, or assurances of any kind, express or implied, with respect to such information, including any information on linked sites and including, but not limited to, accuracy of the information or its completeness, timeliness, usefulness, adequacy, continued availability, or ownership. This is an equal opportunity program. Assistive technologies are available upon request and include Voice/TTY (771 or 800-947-6644).
-                    </p>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
