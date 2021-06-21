@@ -1552,7 +1552,7 @@ var Game = Game || (function (createjs, $) {
                 var background = new createjs.Shape();
                 background.graphics.setStrokeStyle(1).beginStroke("yellow").beginFill("brown");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
-                background.alpha = 0.95;
+                background.alpha = 1;
                 container.addChild(background);
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
