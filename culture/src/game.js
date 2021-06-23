@@ -466,7 +466,7 @@ var Game = Game || (function (createjs, $) {
                 startButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
                 startButton.cursor = 'pointer';
           	startButton.x = 1160;
-                startButton.y = 810;
+                startButton.y = 610;
 
                 view.addChild(new createjs.Bitmap(queue.getResult("title_background")))
                 view.addChild(startButton);
@@ -1378,8 +1378,8 @@ var Game = Game || (function (createjs, $) {
                     answerText.color = "black";
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 10;
-                    answerText.y = 5;
-                    answerText.lineWidth = boardWidth - 200;
+                    answerText.y = 50;
+                    answerText.lineWidth = boardWidth - 20;
                     answerText.name = "answerText";
                     ac.name = "answer";
                     ac.cursor = "pointer";
@@ -1520,7 +1520,7 @@ var Game = Game || (function (createjs, $) {
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
                                     .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
-                                    .to({ x: 10, scaleX: 1, scaleY: 10 }, 500);
+                                    .to({ x: 10, scaleX: 1, scaleY: 1 }, 500);
                             }
 
                         }
