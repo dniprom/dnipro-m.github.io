@@ -366,7 +366,7 @@ var Game = Game || (function (createjs, $) {
 
                 questionContainer = createQuestionContainer();
                 questionContainer.x = boardStartX;
-                questionContainer.y = boardStartY;
+                questionContainer.y = boardStartY + 20;
                 showQuestionContainer(gameData.Questions[currentQuestion]);
 
 
