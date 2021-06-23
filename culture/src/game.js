@@ -366,7 +366,7 @@ var Game = Game || (function (createjs, $) {
 
                 questionContainer = createQuestionContainer();
                 questionContainer.x = boardStartX;
-                questionContainer.y = boardStartY + 20;
+                questionContainer.y = boardStartY;
                 showQuestionContainer(gameData.Questions[currentQuestion]);
 
 
@@ -1378,7 +1378,7 @@ var Game = Game || (function (createjs, $) {
                     answerText.color = "black";
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 10;
-                    answerText.y = 5;
+                    answerText.y = 15;
                     answerText.lineWidth = boardWidth - 20;
                     answerText.name = "answerText";
                     ac.name = "answer";
