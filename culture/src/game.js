@@ -225,7 +225,7 @@ var Game = Game || (function (createjs, $) {
 
                 text.set({
                     x: 380,
-                    y: -35,
+                    y: 3500,
 
                     textAlign: "center",
                     textBaseline: "middle",
@@ -1378,8 +1378,8 @@ var Game = Game || (function (createjs, $) {
                     answerText.color = "black";
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 10;
-                    answerText.y = 50;
-                    answerText.lineWidth = boardWidth - 20;
+                    answerText.y = 5;
+                    answerText.lineWidth = boardWidth - 200;
                     answerText.name = "answerText";
                     ac.name = "answer";
                     ac.cursor = "pointer";
