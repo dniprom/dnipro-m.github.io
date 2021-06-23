@@ -379,7 +379,7 @@ var Game = Game || (function (createjs, $) {
             function createInstructionContainer() {
                 var instructionsContainer = new createjs.Container();
                 instructionsContainer.x = 1500;
-                instructionsContainer.y = 670;
+                instructionsContainer.y = 6700;
                 instructionsContainer.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#F00").drawCircle(0, 50, 50));
                 instructionsContainer.cursor = 'pointer';
 
@@ -1385,7 +1385,7 @@ var Game = Game || (function (createjs, $) {
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
                     answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer.graphics.drawRect(0, 0, boardWidth - 200, 400);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
@@ -1517,10 +1517,10 @@ var Game = Game || (function (createjs, $) {
                                 // alert(correctButton.text);
                                 correctButton.getChildByName("answerText").color = "green";
                                 createjs.Tween.get(correctButton, { override: true })
-                                    .to({ x: -20, scaleX: 1.1, scaleY: 10.1 }, 500)
-                                    .to({ x: 10, scaleX: 1, scaleY: 10 }, 500)
-                                    .to({ x: -20, scaleX: 1.1, scaleY: 10.1 }, 500)
-                                    .to({ x: 10, scaleX: 1, scaleY: 10 }, 500);
+                                    .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
+                                    .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
+                                    .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
+                                    .to({ x: 10, scaleX: 1, scaleY: 1 }, 500);
                             }
 
                         }
