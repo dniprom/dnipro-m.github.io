@@ -1390,8 +1390,8 @@ var Game = Game || (function (createjs, $) {
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#ffd5c0");
-                    answer1.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
+                    answer1.graphics.drawRect(0, 0, boardWidth - 20, 80);
                     answer1.name = "answerShape";
 
 
@@ -1577,7 +1577,7 @@ var Game = Game || (function (createjs, $) {
                 nextButton.regX = nextButton.getBounds().width / 2;
 
                 nextButton.cursor = "pointer";
-                nextButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("black").drawCircle(50, 50, 50));
+                nextButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
 
                 nextButton.addEventListener("pressup", handleNextButtonPressUp);
 
