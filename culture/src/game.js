@@ -1385,7 +1385,7 @@ var Game = Game || (function (createjs, $) {
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
                     answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer.graphics.drawRect(10, 0, boardWidth - 40, 80);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
