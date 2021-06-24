@@ -1396,7 +1396,7 @@ var Game = Game || (function (createjs, $) {
 
 
                     ac.x = 10;
-                    ac.y = startY + i * 50;
+                    ac.y = startY + i * 60;
                     descriptionContainerY = ac.y;
                     ac.addChild(answer);
                     ac.addChild(answer1);
