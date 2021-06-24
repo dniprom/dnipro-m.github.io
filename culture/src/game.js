@@ -1557,7 +1557,7 @@ var Game = Game || (function (createjs, $) {
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
                 //change green color
-                questionText.color = "yellow";
+                questionText.color = "white";
                 questionText.text = "";
                 questionText.x = 10;
                 questionText.y = 20;
