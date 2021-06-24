@@ -1391,7 +1391,7 @@ var Game = Game || (function (createjs, $) {
 
                     var answer1 = new createjs.Shape();
                     answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer1.graphics.drawRect(10, 20, boardWidth - 20, 70);
+                    answer1.graphics.drawRect(10, 0, boardWidth - 40, 80);
                     answer1.name = "answerShape";
 
 
