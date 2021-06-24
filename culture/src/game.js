@@ -1741,7 +1741,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var qLeftLabel = new createjs.Text("", "20px Verdana", "");
-                qLeftLabel.color = "#C63516";
+                qLeftLabel.color = "yellow";
                 qLeftLabel.text = "Залишилось\n  запитань:";
                 qLeftLabel.x = 0;
                 qLeftLabel.y = 2;
