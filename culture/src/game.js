@@ -225,7 +225,7 @@ var Game = Game || (function (createjs, $) {
 
                 text.set({
                     x: 380,
-                    y: 3500,
+                    y: -35,
 
                     textAlign: "center",
                     textBaseline: "middle",
@@ -1379,7 +1379,7 @@ var Game = Game || (function (createjs, $) {
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 10;
                     answerText.y = 5;
-                    answerText.lineWidth = boardWidth - 200;
+                    answerText.lineWidth = boardWidth - 20;
                     answerText.name = "answerText";
                     ac.name = "answer";
                     ac.cursor = "pointer";
@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("yellow").beginFill("brown");
+                background.graphics.setStrokeStyle(1).beginStroke("invory").beginFill("gray");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
