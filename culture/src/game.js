@@ -1385,18 +1385,18 @@ var Game = Game || (function (createjs, $) {
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
                     answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer.graphics.drawRect(10, 30, boardWidth - 40, 60);
+                    answer.graphics.drawRect(10, 0, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
                     answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer1.graphics.drawRect(10, 30, boardWidth - 40, 60);
+                    answer1.graphics.drawRect(10, 0, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
 
                     ac.x = 10;
-                    ac.y = startY + i * 60;
+                    ac.y = startY + i * 80;
                     descriptionContainerY = ac.y;
                     ac.addChild(answer);
                     ac.addChild(answer1);
