@@ -1577,7 +1577,7 @@ var Game = Game || (function (createjs, $) {
                 nextButton.regX = nextButton.getBounds().width / 2;
 
                 nextButton.cursor = "pointer";
-                nextButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
+                nextButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("black").drawCircle(50, 50, 50));
 
                 nextButton.addEventListener("pressup", handleNextButtonPressUp);
 
