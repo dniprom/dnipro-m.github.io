@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#444343");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("white");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
+                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
