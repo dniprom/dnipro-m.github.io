@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
+                    answer.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#E9521F");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#E9521F");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
