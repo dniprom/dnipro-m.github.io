@@ -1375,7 +1375,7 @@ var Game = Game || (function (createjs, $) {
                     var ac = new createjs.Container();
 
                     var answerText = new createjs.Text("", "20px Arial", "");
-                    answerText.color = "black";
+                    answerText.color = "white";
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 15;
                     answerText.y = 15;
