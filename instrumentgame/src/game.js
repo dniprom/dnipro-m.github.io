@@ -1375,28 +1375,28 @@ var Game = Game || (function (createjs, $) {
                     var ac = new createjs.Container();
 
                     var answerText = new createjs.Text("", "20px Arial", "");
-                    answerText.color = "black";
+                    answerText.color = "white";
                     answerText.text = question.Answers[i].Text;
-                    answerText.x = 10;
-                    answerText.y = 5;
-                    answerText.lineWidth = boardWidth - 20;
+                    answerText.x = 15;
+                    answerText.y = 15;
+                    answerText.lineWidth = boardWidth - 40;
                     answerText.name = "answerText";
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
+                    answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#ffd5c0");
-                    answer1.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#E9521F");
+                    answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
 
                     ac.x = 10;
-                    ac.y = startY + i * 50;
+                    ac.y = startY + i * 70;
                     descriptionContainerY = ac.y;
                     ac.addChild(answer);
                     ac.addChild(answer1);
@@ -1456,13 +1456,13 @@ var Game = Game || (function (createjs, $) {
 
 
                 if (event.type == "mouseover") {
-                    event.currentTarget.getChildByName("answerText").color = "brown";
+                    event.currentTarget.getChildByName("answerText").color = "white";
                     event.currentTarget.getChildByName("answerText").font = "bold 24px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 0;
                     event.currentTarget.getChildByName("answerShapeHighlighted").alpha = 1;
                 }
                 else {
-                    event.currentTarget.getChildByName("answerText").color = "black";
+                    event.currentTarget.getChildByName("answerText").color = "white";
 
                     event.currentTarget.getChildByName("answerText").font = "20px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 1;
@@ -1550,14 +1550,14 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("yellow").beginFill("brown");
+                background.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
                 //change green color
-                questionText.color = "yellow";
+                questionText.color = "black";
                 questionText.text = "";
                 questionText.x = 10;
                 questionText.y = 20;
