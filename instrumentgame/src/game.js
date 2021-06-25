@@ -1515,7 +1515,7 @@ var Game = Game || (function (createjs, $) {
                             if (questionContainer.children[k].IsCorrect) {
                                 var correctButton = questionContainer.children[k];
                                 // alert(correctButton.text);
-                                correctButton.getChildByName("answerText").color = "green";
+                                correctButton.getChildByName("answerText").color = "white";
                                 createjs.Tween.get(correctButton, { override: true })
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
                                     .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
