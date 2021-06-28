@@ -1456,13 +1456,13 @@ var Game = Game || (function (createjs, $) {
 
 
                 if (event.type == "mouseover") {
-                    event.currentTarget.getChildByName("answerText").color = "black";
+                    event.currentTarget.getChildByName("answerText").color = "white";
                     event.currentTarget.getChildByName("answerText").font = "bold 24px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 0;
                     event.currentTarget.getChildByName("answerShapeHighlighted").alpha = 1;
                 }
                 else {
-                    event.currentTarget.getChildByName("answerText").color = "black";
+                    event.currentTarget.getChildByName("answerText").color = "white";
 
                     event.currentTarget.getChildByName("answerText").font = "20px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 1;
