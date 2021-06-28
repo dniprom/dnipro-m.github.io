@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("white");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("black");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("black");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
@@ -1651,7 +1651,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score score
                 var scoreText = new createjs.Text("", "32px Verdana bold", "");
-                scoreText.color = "white";
+                scoreText.color = "black";
                 scoreText.text = gameState.score;
                 scoreText.x = 40;
                 scoreText.y = 40;
@@ -1725,7 +1725,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score score
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
-                movesLeftText.color = "white";
+                movesLeftText.color = "black";
                 movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score. 
                 movesLeftText.x = 40;
                 movesLeftText.y = 50;
@@ -1749,7 +1749,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score score
                 var qLeftText = new createjs.Text("", "32px Verdana", "");
-                qLeftText.color = "white";
+                qLeftText.color = "black";
                 qLeftText.text = questionsLeft;
                 qLeftText.x = 40;
                 qLeftText.y = 50;
