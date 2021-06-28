@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("black");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
