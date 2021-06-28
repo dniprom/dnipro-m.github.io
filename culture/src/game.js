@@ -119,7 +119,7 @@ var Game = Game || (function (createjs, $) {
         var movesContainerAtY = 340;
         var scoreContainerAtY = 470;
         var questionsContainerAtY = 190;
-        var maxI = 17; //number of element in a row
+        var maxI = 16; //number of element in a row
         var maxJ = 10; //number of element in a column
         var DragThreshold = 30;
         if (navigator.userAgent.match(/Android/i)
