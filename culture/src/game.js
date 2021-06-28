@@ -112,7 +112,7 @@ var Game = Game || (function (createjs, $) {
         var boardStartX = 30;
         var boardStartY = 55;
         var boardWidth = 1060;
-        var boardHeight = 635;
+        var boardHeight = 715;
 
         var containerAtX = boardStartX + boardWidth + 20;
         var hintContainerAtY = 600;
@@ -203,7 +203,7 @@ var Game = Game || (function (createjs, $) {
             //add the background
             var canvasBackground = new createjs.Shape();
             canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#E9EDFF");
-            canvasBackground.graphics.drawRect(0, 0, 1280, 820);
+            canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
             //create game objects
