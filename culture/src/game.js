@@ -1643,7 +1643,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var scoreLabel = new createjs.Text("", "20px Verdana", "");
-                scoreLabel.color = "yellow";
+                scoreLabel.color = "#E9521F";
                 scoreLabel.text = " Рекорд:";
                 scoreLabel.x = 10;
                 scoreLabel.y = 2;
@@ -1717,7 +1717,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var movesLeftLabel = new createjs.Text("", "20px Verdana", "");
-                movesLeftLabel.color = "yellow";
+                movesLeftLabel.color = "#E9521F";
                 movesLeftLabel.text = " Залишилось\n      ходів:";
                 movesLeftLabel.x = 0;
                 movesLeftLabel.y = 2;
