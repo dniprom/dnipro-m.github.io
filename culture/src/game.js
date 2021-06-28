@@ -341,7 +341,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 exitContainer.x = 720;
-                exitContainer.y = 570;
+                exitContainer.y = 670;
                 var exitText = new createjs.Text("BACK", 'bold 18px Arial', "#fff");
                 exitText.x = 8;
                 exitText.y = 8;
@@ -466,7 +466,7 @@ var Game = Game || (function (createjs, $) {
                 startButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
                 startButton.cursor = 'pointer';
           	startButton.x = 1160;
-                startButton.y = 710;
+                startButton.y = 610;
 
                 view.addChild(new createjs.Bitmap(queue.getResult("title_background")))
                 view.addChild(startButton);
