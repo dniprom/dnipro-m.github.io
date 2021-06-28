@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E8E8E8");
+                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E9521F");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E8E8E8");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E9521F");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
