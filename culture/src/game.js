@@ -466,7 +466,7 @@ var Game = Game || (function (createjs, $) {
                 startButton.hitArea = new createjs.Shape(new createjs.Graphics().beginFill("#f00").drawCircle(50, 50, 50));
                 startButton.cursor = 'pointer';
           	startButton.x = 1160;
-                startButton.y = 610;
+                startButton.y = 710;
 
                 view.addChild(new createjs.Bitmap(queue.getResult("title_background")))
                 view.addChild(startButton);
