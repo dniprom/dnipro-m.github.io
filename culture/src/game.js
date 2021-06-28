@@ -112,7 +112,7 @@ var Game = Game || (function (createjs, $) {
         var boardStartX = 30;
         var boardStartY = 55;
         var boardWidth = 1060;
-        var boardHeight = 735;
+        var boardHeight = 650;
 
         var containerAtX = boardStartX + boardWidth + 20;
         var hintContainerAtY = 600;
