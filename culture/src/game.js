@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#EBEBEC");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#E9EDFF");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
