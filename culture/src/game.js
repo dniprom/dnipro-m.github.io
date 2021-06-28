@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#444343");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("white");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#E9521F");
+                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E8E8E8");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#E9521F");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E8E8E8");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
@@ -1456,13 +1456,13 @@ var Game = Game || (function (createjs, $) {
 
 
                 if (event.type == "mouseover") {
-                    event.currentTarget.getChildByName("answerText").color = "white";
+                    event.currentTarget.getChildByName("answerText").color = "black";
                     event.currentTarget.getChildByName("answerText").font = "bold 24px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 0;
                     event.currentTarget.getChildByName("answerShapeHighlighted").alpha = 1;
                 }
                 else {
-                    event.currentTarget.getChildByName("answerText").color = "white";
+                    event.currentTarget.getChildByName("answerText").color = "black";
 
                     event.currentTarget.getChildByName("answerText").font = "20px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 1;
@@ -1515,7 +1515,7 @@ var Game = Game || (function (createjs, $) {
                             if (questionContainer.children[k].IsCorrect) {
                                 var correctButton = questionContainer.children[k];
                                 // alert(correctButton.text);
-                                correctButton.getChildByName("answerText").color = "white";
+                                correctButton.getChildByName("answerText").color = "black";
                                 createjs.Tween.get(correctButton, { override: true })
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
                                     .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
@@ -1741,7 +1741,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var qLeftLabel = new createjs.Text("", "20px Verdana", "");
-                qLeftLabel.color = "yellow";
+                qLeftLabel.color = "#E9521F";
                 qLeftLabel.text = "Залишилось\n  запитань:";
                 qLeftLabel.x = 0;
                 qLeftLabel.y = 2;
@@ -1783,13 +1783,13 @@ var Game = Game || (function (createjs, $) {
                 if (gameState.score > 0) {
                     image = queue.getResult("chakalaka_bowl");
                     winner_header = new createjs.Bitmap(queue.getResult("winner_header"));
-                    titleText = new createjs.Text("Ви набрали " + gameState.score + " балів!", "32pt Arial bold", "white");
+                    titleText = new createjs.Text("Ви набрали " + gameState.score + " балів!", "32pt Arial bold", "black");
                     createjs.Sound.play("chakalaka2");
                 }
                 else {
                     image = queue.getResult("smashed_tomato");
                     winner_header = new createjs.Bitmap(queue.getResult("aesh_header"));
-                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "white");
+                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "black");
                     createjs.Sound.play("aaeesshh1");
                 }
 
