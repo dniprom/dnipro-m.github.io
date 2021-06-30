@@ -221,7 +221,7 @@ var Game = Game || (function (createjs, $) {
 
             function displayMessage(message) {
 
-                var text = new createjs.Text(message, "bold 50px Cooper Black", "#ffd5c0");
+                var text = new createjs.Text(message, "bold 50px Cooper Black", "#E9521F");
 
                 text.set({
                     x: 380,
@@ -247,11 +247,11 @@ var Game = Game || (function (createjs, $) {
 
             function wrongAnswer(message) {
 
-                var text = new createjs.Text(message, "bold 30px Cooper Black", "beige");
+                var text = new createjs.Text(message, "bold 30px Cooper Black", "#E9521F");
 
                 text.set({
                     x: 400,
-                    y: -40,
+                    y: -30,
 
                     textAlign: "center",
                     textBaseline: "middle",
