@@ -247,7 +247,7 @@ var Game = Game || (function (createjs, $) {
 
             function wrongAnswer(message) {
 
-                var text = new createjs.Text(message, "bold 30px Cooper Black", "F26516");
+                var text = new createjs.Text(message, "bold 50px Cooper Black", "#F26516");
 
                 text.set({
                     x: 380,
