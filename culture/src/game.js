@@ -1375,7 +1375,7 @@ var Game = Game || (function (createjs, $) {
                     var ac = new createjs.Container();
 
                     var answerText = new createjs.Text("", "20px Arial", "");
-                    answerText.color = "white";
+                    answerText.color = "black";
                     answerText.text = question.Answers[i].Text;
                     answerText.x = 15;
                     answerText.y = 15;
@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E9521F");
+                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#E9521F");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
@@ -1456,13 +1456,13 @@ var Game = Game || (function (createjs, $) {
 
 
                 if (event.type == "mouseover") {
-                    event.currentTarget.getChildByName("answerText").color = "white";
+                    event.currentTarget.getChildByName("answerText").color = "black";
                     event.currentTarget.getChildByName("answerText").font = "bold 24px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 0;
                     event.currentTarget.getChildByName("answerShapeHighlighted").alpha = 1;
                 }
                 else {
-                    event.currentTarget.getChildByName("answerText").color = "white";
+                    event.currentTarget.getChildByName("answerText").color = "black";
 
                     event.currentTarget.getChildByName("answerText").font = "20px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 1;
@@ -1515,7 +1515,7 @@ var Game = Game || (function (createjs, $) {
                             if (questionContainer.children[k].IsCorrect) {
                                 var correctButton = questionContainer.children[k];
                                 // alert(correctButton.text);
-                                correctButton.getChildByName("answerText").color = "white";
+                                correctButton.getChildByName("answerText").color = "black";
                                 createjs.Tween.get(correctButton, { override: true })
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
                                     .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
@@ -1550,14 +1550,14 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#ACC2D7");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
                 //change green color
-                questionText.color = "black";
+                questionText.color = "white";
                 questionText.text = "";
                 questionText.x = 10;
                 questionText.y = 20;
