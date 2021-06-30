@@ -1650,11 +1650,11 @@ var Game = Game || (function (createjs, $) {
                 container.addChild(scoreLabel);
 
                 //user score score
-                var scoreText = new createjs.Text("", "32px Verdana bold", "");
+                var scoreText = new createjs.Text("", "32px Verdana", "");
                 scoreText.color = "black";
                 scoreText.text = gameState.score;
                 scoreText.x = 40;
-                scoreText.y = 40;
+                scoreText.y = 50;
                 scoreText.name = "score";
                 container.addChild(scoreText);
                 return container;
