@@ -1783,7 +1783,7 @@ var Game = Game || (function (createjs, $) {
                 if (gameState.score > 0) {
                     image = queue.getResult("chakalaka_bowl");
                     winner_header = new createjs.Bitmap(queue.getResult("winner_header"));
-                    titleText = new createjs.Text("Ви набрали " + gameState.score + " балів!", "32pt Arial bold", "black");
+                    titleText = new createjs.Text("Набрано" + gameState.score + " балів!", "32pt Arial bold", "black");
                     createjs.Sound.play("chakalaka2");
                 }
                 else {
