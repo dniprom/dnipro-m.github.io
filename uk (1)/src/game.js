@@ -112,14 +112,14 @@ var Game = Game || (function (createjs, $) {
         var boardStartX = 30;
         var boardStartY = 55;
         var boardWidth = 1060;
-        var boardHeight = 635;
+        var boardHeight = 650;
 
         var containerAtX = boardStartX + boardWidth + 20;
         var hintContainerAtY = 600;
         var movesContainerAtY = 340;
         var scoreContainerAtY = 470;
         var questionsContainerAtY = 190;
-        var maxI = 17; //number of element in a row
+        var maxI = 16; //number of element in a row
         var maxJ = 10; //number of element in a column
         var DragThreshold = 30;
         if (navigator.userAgent.match(/Android/i)
@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("white").beginFill("#444343");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#E9EDFF");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
@@ -221,11 +221,11 @@ var Game = Game || (function (createjs, $) {
 
             function displayMessage(message) {
 
-                var text = new createjs.Text(message, "bold 50px Cooper Black", "#ffd5c0");
+                var text = new createjs.Text(message, "bold 50px Cooper Black", "#F26516");
 
                 text.set({
                     x: 380,
-                    y: -35,
+                    y: -20,
 
                     textAlign: "center",
                     textBaseline: "middle",
@@ -247,11 +247,11 @@ var Game = Game || (function (createjs, $) {
 
             function wrongAnswer(message) {
 
-                var text = new createjs.Text(message, "bold 30px Cooper Black", "beige");
+                var text = new createjs.Text(message, "bold 50px Cooper Black", "#F26516");
 
                 text.set({
-                    x: 400,
-                    y: -40,
+                    x: 380,
+                    y: -20,
 
                     textAlign: "center",
                     textBaseline: "middle",
@@ -341,7 +341,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 exitContainer.x = 720;
-                exitContainer.y = 570;
+                exitContainer.y = 670;
                 var exitText = new createjs.Text("BACK", 'bold 18px Arial', "#fff");
                 exitText.x = 8;
                 exitText.y = 8;
@@ -1377,26 +1377,26 @@ var Game = Game || (function (createjs, $) {
                     var answerText = new createjs.Text("", "20px Arial", "");
                     answerText.color = "black";
                     answerText.text = question.Answers[i].Text;
-                    answerText.x = 10;
-                    answerText.y = 5;
-                    answerText.lineWidth = boardWidth - 20;
+                    answerText.x = 15;
+                    answerText.y = 15;
+                    answerText.lineWidth = boardWidth - 40;
                     answerText.name = "answerText";
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("black").beginFill("white");
-                    answer.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
+                    answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("black").beginFill("#ffd5c0");
-                    answer1.graphics.drawRect(0, 0, boardWidth - 20, 40);
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("white");
+                    answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
 
                     ac.x = 10;
-                    ac.y = startY + i * 50;
+                    ac.y = startY + i * 70;
                     descriptionContainerY = ac.y;
                     ac.addChild(answer);
                     ac.addChild(answer1);
@@ -1456,7 +1456,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 if (event.type == "mouseover") {
-                    event.currentTarget.getChildByName("answerText").color = "brown";
+                    event.currentTarget.getChildByName("answerText").color = "black";
                     event.currentTarget.getChildByName("answerText").font = "bold 24px Arial";
                     event.currentTarget.getChildByName("answerShape").alpha = 0;
                     event.currentTarget.getChildByName("answerShapeHighlighted").alpha = 1;
@@ -1515,7 +1515,7 @@ var Game = Game || (function (createjs, $) {
                             if (questionContainer.children[k].IsCorrect) {
                                 var correctButton = questionContainer.children[k];
                                 // alert(correctButton.text);
-                                correctButton.getChildByName("answerText").color = "green";
+                                correctButton.getChildByName("answerText").color = "black";
                                 createjs.Tween.get(correctButton, { override: true })
                                     .to({ x: -20, scaleX: 1.1, scaleY: 1.1 }, 500)
                                     .to({ x: 10, scaleX: 1, scaleY: 1 }, 500)
@@ -1550,14 +1550,14 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("yellow").beginFill("brown");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#ACC2D7");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
                 //change green color
-                questionText.color = "yellow";
+                questionText.color = "white";
                 questionText.text = "";
                 questionText.x = 10;
                 questionText.y = 20;
@@ -1643,18 +1643,18 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var scoreLabel = new createjs.Text("", "20px Verdana", "");
-                scoreLabel.color = "yellow";
+                scoreLabel.color = "#E9521F";
                 scoreLabel.text = " Рекорд:";
                 scoreLabel.x = 10;
                 scoreLabel.y = 2;
                 container.addChild(scoreLabel);
 
                 //user score score
-                var scoreText = new createjs.Text("", "32px Verdana bold", "");
-                scoreText.color = "white";
+                var scoreText = new createjs.Text("", "32px Verdana", "");
+                scoreText.color = "black";
                 scoreText.text = gameState.score;
                 scoreText.x = 40;
-                scoreText.y = 40;
+                scoreText.y = 50;
                 scoreText.name = "score";
                 container.addChild(scoreText);
                 return container;
@@ -1717,7 +1717,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var movesLeftLabel = new createjs.Text("", "20px Verdana", "");
-                movesLeftLabel.color = "yellow";
+                movesLeftLabel.color = "#E9521F";
                 movesLeftLabel.text = " Залишилось\n      ходів:";
                 movesLeftLabel.x = 0;
                 movesLeftLabel.y = 2;
@@ -1725,7 +1725,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score score
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
-                movesLeftText.color = "white";
+                movesLeftText.color = "black";
                 movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score. 
                 movesLeftText.x = 40;
                 movesLeftText.y = 50;
@@ -1741,7 +1741,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score title
                 var qLeftLabel = new createjs.Text("", "20px Verdana", "");
-                qLeftLabel.color = "yellow";
+                qLeftLabel.color = "#E9521F";
                 qLeftLabel.text = "Залишилось\n  запитань:";
                 qLeftLabel.x = 0;
                 qLeftLabel.y = 2;
@@ -1749,7 +1749,7 @@ var Game = Game || (function (createjs, $) {
 
                 //user score score
                 var qLeftText = new createjs.Text("", "32px Verdana", "");
-                qLeftText.color = "white";
+                qLeftText.color = "black";
                 qLeftText.text = questionsLeft;
                 qLeftText.x = 40;
                 qLeftText.y = 50;
@@ -1783,13 +1783,13 @@ var Game = Game || (function (createjs, $) {
                 if (gameState.score > 0) {
                     image = queue.getResult("chakalaka_bowl");
                     winner_header = new createjs.Bitmap(queue.getResult("winner_header"));
-                    titleText = new createjs.Text("Ви набрали " + gameState.score + " балів!", "32pt Arial bold", "white");
+                    titleText = new createjs.Text("Набрано" + gameState.score + " балів!", "32pt Arial bold", "black");
                     createjs.Sound.play("chakalaka2");
                 }
                 else {
                     image = queue.getResult("smashed_tomato");
                     winner_header = new createjs.Bitmap(queue.getResult("aesh_header"));
-                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "white");
+                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "black");
                     createjs.Sound.play("aaeesshh1");
                 }
 
