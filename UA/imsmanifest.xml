@@ -4,11 +4,11 @@
     <schema>ADL SCORM</schema>
     <schemaversion>2004 3rd Edition</schemaversion>
   </metadata>
-  <organizations default="org_wisconline_190037">
-    <organization identifier="org_wisconline_190037">
-      <title>uk</title>
+  <organizations default="org_wisconline_99787">
+    <organization identifier="org_wisconline_99787">
+      <title>js</title>
       <item identifier="flashcardItem" identifierref="flashcardItem_resource">
-        <title>uk</title>
+        <title>js</title>
         <imsss:sequencing>
           <imsss:controlMode choiceExit="true" />
           <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />

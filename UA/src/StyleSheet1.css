@@ -6,16 +6,16 @@
             top: 0px;
             left: 0px;
             background:#808080;
-            width:100%;
+            width:720px;
             z-index:10;
 
         }
         #dialogbox{
             display: none;
-            position:fixed;
+            position:center;
             background:#000000;
             border-radius:7px;
-            width:550px;
+            width: 720px;
             z-index:10;
 
         }
@@ -25,5 +25,5 @@
        #dialogbox > div >#dialogboxfoot{background:#ff0000; padding:10px; text-align:right;}
 
        body{
-           background-color:rebeccapurple;
+           background-color: white;
        }
