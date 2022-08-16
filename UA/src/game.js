@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#ACC2D7");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("linear-gradient(180deg, #CCE7FF 0%, rgba(255, 250, 204, 0.99) 100%)");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
