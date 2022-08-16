@@ -1718,7 +1718,7 @@ var Game = Game || (function (createjs, $) {
                 //user score title
                 var movesLeftLabel = new createjs.Text("", "20px Cera Pro", "");
                 movesLeftLabel.color = "#E9521F";
-                movesLeftLabel.text = " Залишилось\n      ходів:";
+                movesLeftLabel.text = " Залишилось\n  ходів:";
                 movesLeftLabel.x = 0;
                 movesLeftLabel.y = 2;
                 container.addChild(movesLeftLabel);
