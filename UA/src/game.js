@@ -1550,7 +1550,7 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("linear-gradient(180deg, #CCE7FF 0%, rgba(255, 250, 204, 0.99) 100%)");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("FFFACC");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
@@ -1718,7 +1718,7 @@ var Game = Game || (function (createjs, $) {
                 //user score title
                 var movesLeftLabel = new createjs.Text("", "20px Cera Pro", "");
                 movesLeftLabel.color = "#E9521F";
-                movesLeftLabel.text = " Залишилось\n  ходів:";
+                movesLeftLabel.text = " Залишилось\n     ходів:";
                 movesLeftLabel.x = 0;
                 movesLeftLabel.y = 2;
                 container.addChild(movesLeftLabel);
