@@ -1550,14 +1550,14 @@ var Game = Game || (function (createjs, $) {
                 //library background   
 
                 var background = new createjs.Shape();
-                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#FFFACC");
+                background.graphics.setStrokeStyle(1).beginStroke("#E9521F").beginFill("#FFF8E9");
                 background.graphics.drawRect(0, 0, boardWidth, boardHeight);
                 background.alpha = 1;
                 container.addChild(background);
 
                 var questionText = new createjs.Text("", "bold 24px Arial", "");
                 //change green color
-                questionText.color = "white";
+                questionText.color = "#525252";
                 questionText.text = "";
                 questionText.x = 10;
                 questionText.y = 20;
@@ -1716,7 +1716,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 //user score title
-                var movesLeftLabel = new createjs.Text("", "20px Cera Pro", "");
+                var movesLeftLabel = new createjs.Text("", "20px Verdana", "");
                 movesLeftLabel.color = "#E9521F";
                 movesLeftLabel.text = " Залишилось\n     ходів:";
                 movesLeftLabel.x = 0;
@@ -1726,7 +1726,7 @@ var Game = Game || (function (createjs, $) {
                 //user score score
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
                 movesLeftText.color = "black";
-                movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score. 
+                movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score.
                 movesLeftText.x = 40;
                 movesLeftText.y = 50;
                 movesLeftText.name = "movesLeft";
