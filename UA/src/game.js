@@ -107,7 +107,7 @@ var Game = Game || (function (createjs, $) {
 
 
 
-        var maxMoveNbr = 5;
+        var maxMoveNbr =  5;
 
         var boardStartX = 30;
         var boardStartY = 55;
@@ -1727,7 +1727,7 @@ var Game = Game || (function (createjs, $) {
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
                 movesLeftText.color = "black";
                 movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score.
-                movesLeftText.x = 40;
+                movesLeftText.x = 80;
                 movesLeftText.y = 50;
                 movesLeftText.name = "movesLeft";
                 container.addChild(movesLeftText);
