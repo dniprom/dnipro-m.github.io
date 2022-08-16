@@ -202,7 +202,7 @@ var Game = Game || (function (createjs, $) {
 
             //add the background
             var canvasBackground = new createjs.Shape();
-            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#E9EDFF");
+            canvasBackground.graphics.setStrokeStyle(1).beginStroke("#F8F3F3").beginFill("#80C4FF");
             canvasBackground.graphics.drawRect(0, 0, 1280, 720);
             stage.addChild(canvasBackground);
 
@@ -1716,7 +1716,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 //user score title
-                var movesLeftLabel = new createjs.Text("", "20px Verdana", "");
+                var movesLeftLabel = new createjs.Text("", "20px Cera Pro", "");
                 movesLeftLabel.color = "#E9521F";
                 movesLeftLabel.text = " Залишилось\n      ходів:";
                 movesLeftLabel.x = 0;
