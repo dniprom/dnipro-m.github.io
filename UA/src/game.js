@@ -510,7 +510,7 @@ var Game = Game || (function (createjs, $) {
                 var container = new createjs.Container();
 
                 var background = new createjs.Shape();
-                // background.graphics.setStrokeStyle(1).beginStroke("white");
+                // background.graphics.setStrokeStyle(1).beginStroke("#FEE1C4");
                 background.graphics.drawRect(boardStartX, boardStartY, boardWidth, boardHeight);
 
                 container.addChild(background);
