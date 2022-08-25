@@ -538,7 +538,7 @@ var Game = Game || (function (createjs, $) {
 
 
                 hintButtonContainer = createHintButton();
-                hintButtonContainer.x = containerAtX + 20;
+                hintButtonContainer.x = containerAtX + 25;
                 hintButtonContainer.y = hintContainerAtY;
 
                 container.addChild(hintButtonContainer);
@@ -1727,7 +1727,7 @@ var Game = Game || (function (createjs, $) {
                 var movesLeftText = new createjs.Text("", "32px Verdana", "");
                 movesLeftText.color = "black";
                 movesLeftText.text = movesLeft; //this will need to change later to be a var to hold user score.
-                movesLeftText.x = 55;
+                movesLeftText.x = 52;
                 movesLeftText.y = 50;
                 movesLeftText.name = "movesLeft";
                 container.addChild(movesLeftText);
