@@ -1789,7 +1789,7 @@ var Game = Game || (function (createjs, $) {
                 else {
                     image = queue.getResult("smashed_tomato");
                     winner_header = new createjs.Bitmap(queue.getResult("aesh_header"));
-                    titleText = new createjs.Text("Нажаль ви не набрали жодного бала!", "24pt Arial bold", "black");
+                    titleText = new createjs.Text("На жаль, ви не набрали жодного балу!", "24pt Arial bold", "black");
                     createjs.Sound.play("aaeesshh1");
                 }
 
