@@ -1,0 +1,4 @@
+﻿gameData = {"RandomizeQuestions":true,"Categories":[],"Questions":[{"Id":"6d51f5d5-3fe9-4f60-79fe-dbb245dfee11","Text":"1","HasImage":false,"RandomizeAnswers":true,"Answers":[{"Id":"","Text":"1","IsCorrect":true},{"Id":"","Text":"0","IsCorrect":false},{"Id":"","Text":"0","IsCorrect":false}]},{"Id":"475e4ce3-733b-43d7-dccd-8c359c6b7e77","Text":"2","HasImage":false,"RandomizeAnswers":true,"Answers":[{"Id":"","Text":"1","IsCorrect":true},{"Id":"","Text":"0","IsCorrect":false},{"Id":"","Text":"0","IsCorrect":false}]},{"Id":"2307cc37-8def-4f47-3168-5a9fcfa8bdc1","Text":"3","HasImage":false,"RandomizeAnswers":true,"Answers":[{"Id":"","Text":"1","IsCorrect":true},{"Id":"","Text":"0","IsCorrect":false},{"Id":"","Text":"0","IsCorrect":false}]}]};
+gameData.Title = "змейка";
+gameData.Description = ""; 
+gameData.imageUrls = {};
