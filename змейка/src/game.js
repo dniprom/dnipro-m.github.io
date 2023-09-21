@@ -1,5 +1,4 @@
-﻿/// <reference path="//code.createjs.com/createjs-2013.12.12.min.js" />
-/// <reference path="../../../Content/GamesDownloadTemplate/lib/ScormHelper.js" />
+﻿/// <reference path="../../../Content/GamesDownloadTemplate/lib/ScormHelper.js" />
 var Game = Game || (function (createjs) {
     //alert("Game starting");
 
