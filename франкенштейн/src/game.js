@@ -233,7 +233,7 @@ var Game = Game || (function (createjs) {
                 // Main Intro Screen
                 var directionsScreen = new createjs.Container();
 
-                var label = new createjs.Text("Directions  \nDirect the snake to the correct answer by using your arrow keys. Collect the snacks if you can for extra points. Avoid the red spikes around the edge of the game board. Press the play button to begin.", "bold 20px Arial", "#000000");
+                var label = new createjs.Text("Directionsssssssss  \nDirect the snake to the correct answer by using your arrow keys. Collect the snacks if you can for extra points. Avoid the red spikes around the edge of the game board. Press the play button to begin.", "bold 20px Arial", "#000000");
                 // label.textAlign = "center";
                 label.lineHeight = "30";
                 label.lineWidth = 500;
