@@ -361,7 +361,7 @@ var Game = Game || (function (createjs) {
                     rightContainer = new createjs.Container();
                     right = new createjs.Bitmap(queue.getResult("arrowright"));
                     rightContainer.y = 475;
-                    rightContainer.x = 700;
+                    rightContainer.x = 1000;
                     rightContainer.scaleX = 1.2
                     rightContainer.scaleY = 1.2
                     rightContainer.addChild(right);
@@ -369,7 +369,7 @@ var Game = Game || (function (createjs) {
                     upContainer = new createjs.Container();
                     up = new createjs.Bitmap(queue.getResult("arrowup"));
                     upContainer.y = 425;
-                    upContainer.x = 650;
+                    upContainer.x = 850;
                     upContainer.scaleX = 1.2
                     upContainer.scaleY = 1.2
                     upContainer.addChild(up);
@@ -377,7 +377,7 @@ var Game = Game || (function (createjs) {
                     downContainer = new createjs.Container();
                     down = new createjs.Bitmap(queue.getResult("arrowdown"));
                     downContainer.y = 525;
-                    downContainer.x = 650;
+                    downContainer.x = 850;
                     downContainer.scaleX = 1.2
                     downContainer.scaleY = 1.2
                     downContainer.addChild(down);
@@ -442,7 +442,7 @@ var Game = Game || (function (createjs) {
                             questionbox.y = 10;
 
                             var questionText = new createjs.Text(questionsArray[onThisQuestionNumber].Text, "bold 14px Arial", "#000000");
-                            questionText.lineWidth = 650;
+                            questionText.lineWidth = 1000;
                             questionText.y = questionbox.y + 5;
                             questionText.x = questionbox.x + 5;
 
@@ -933,7 +933,7 @@ var Game = Game || (function (createjs) {
                     scoreLabel.lineWidth = 270;
                     scoreLabel.color = "white";
                     scoreLabel.y = 30;
-                    scoreLabel.x = 740;
+                    scoreLabel.x = 0;
 
 
                     self.stage.addChild(scoreLabel);
