@@ -15,7 +15,7 @@ var Game = Game || (function (createjs) {
             self.stage = new createjs.Stage(canvas);
             var stageBG = new createjs.Shape();
             stageBG.name = "stageBG";
-            stageBG.graphics.setStrokeStyle(3).beginStroke("black").beginFill("silver").drawRect(0, 0, 800, 600).endStroke().endFill();
+            stageBG.graphics.setStrokeStyle(3).beginStroke("black").beginFill("silver").drawRect(0, 0, 1280, 720).endStroke().endFill();
             self.stage.addChild(stageBG);
             createjs.Touch.enable(self.stage, false, true);
             self.stage.enableMouseOver(25);
