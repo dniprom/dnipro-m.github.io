@@ -1390,7 +1390,7 @@ var Game = Game || (function (createjs, $) {
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("#BBBDC8").beginFill("white");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#2E2E2E").beginFill("white");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
