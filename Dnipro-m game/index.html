@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Wisc-Online Game</title>
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="lib/SCORM_API_wrapper.js"></script>
+    <script type="text/javascript" src="lib/ScormHelper.js"></script>
+    <script type="text/javascript" src="src/createjs.min.js"></script>
+    <script type="text/javascript" src="src/gameData.js"></script>
+    <script type="text/javascript" src="src/game.js"></script>
+    <script type="text/javascript">
+        function onUnload() {
+
+            ScormHelper.cmi.exit("");
+
+            ScormHelper.terminate();
+        }
+    </script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #gameContainer canvas {
+            border: #707070 solid 1px;
+            border-radius: 5px;
+            width: 1280px;
+            height: 720px;
+            margin: 15px auto;
+display: flex;
+  align-items: center;  
+        }
+
+    </style>
+</head>
+<body onbeforeunload="onUnload();">
+    <div id="gameContainer">
+        <canvas width="1280" height="720">
+            <h3>Your browser does not support HTML5.</h3>
+        </canvas>
+        <script type="text/javascript">
+            (function () {
+                var canvas = (function () {
+                    var scripts = document.getElementsByTagName('script');
+                    var targetDiv = scripts[scripts.length - 1].previousElementSibling || scripts[scripts.length - 1].previousSibling;
+                    return targetDiv;
+                })();
+
+                gameData.assetsPath = "src/";
+
+                if (gameData.Title) {
+                    document.title = gameData.Title;
+                }
+
+                var game = new Game(canvas, gameData);
+
+                $(function () {
+                    $("#gameTitleSpan").text(gameData.Title);
+                });
+            })();
+        </script>
+    </div>
+    </body>
+</html>
