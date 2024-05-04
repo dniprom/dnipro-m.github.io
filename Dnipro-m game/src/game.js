@@ -221,7 +221,7 @@ var Game = Game || (function (createjs, $) {
 
             function displayMessage(message) {
 
-                var text = new createjs.Text(message, "bold 50px Cooper Black", "#F26516");
+                var text = new createjs.Text(message, "bold 45px Cooper Black", "#FF2F00");
 
                 text.set({
                     x: 380,
@@ -247,7 +247,7 @@ var Game = Game || (function (createjs, $) {
 
             function wrongAnswer(message) {
 
-                var text = new createjs.Text(message, "bold 50px Cooper Black", "#F26516");
+                var text = new createjs.Text(message, "bold 45px Cooper Black", "#FF2F00");
 
                 text.set({
                     x: 380,
@@ -1384,13 +1384,13 @@ var Game = Game || (function (createjs, $) {
                     ac.name = "answer";
                     ac.cursor = "pointer";
                     var answer = new createjs.Shape();
-                    answer.graphics.setStrokeStyle(1).beginStroke("#D5D5D5").beginFill("white");
+                    answer.graphics.setStrokeStyle(1).beginStroke("#C2C2C2").beginFill("white");
                     answer.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer.name = "answerShapeHighlighted";
                     answer.alpha = 0;
 
                     var answer1 = new createjs.Shape();
-                    answer1.graphics.setStrokeStyle(1).beginStroke("#D5D5D5").beginFill("white");
+                    answer1.graphics.setStrokeStyle(1).beginStroke("#2E2E2E").beginFill("white");
                     answer1.graphics.drawRect(10, 10, boardWidth - 40, 60);
                     answer1.name = "answerShape";
 
